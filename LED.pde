@@ -1,6 +1,7 @@
-int numLeds = 48; //scarf
+//int numLeds = 48; //scarf
 //int numLeds = 12; //hood
 //int numLeds = 51;  //bike beacons
+int numLeds = 46;  //bike beacons
 
 byte[] pixelBuffer;
 //int w = 640;
@@ -22,7 +23,7 @@ class LED
 }
 
 
-
+/*
 //Scarf: 48 leds
 void PopulateLedArray()
 {
@@ -76,7 +77,7 @@ leds[46] = new LED(4,4);
 leds[47] = new LED(4,2);
 }
 
-/*
+
 
 //Fiber Hood 12 leds
 void PopulateLedArray()
@@ -94,10 +95,10 @@ leds[9] = new LED(2,4);
 leds[10] = new LED(2,3);
 leds[11] = new LED(2,2);
 }
+*/
 
 
-/*
-//Beacon on bikes  51 leds
+//Beacon on bikes  51 leds (46)
 void PopulateLedArray()
 {
 leds[0] = new LED(2,0);
@@ -146,6 +147,8 @@ leds[42] = new LED(2,42);
 leds[43] = new LED(2,43);
 leds[44] = new LED(2,44);
 leds[45] = new LED(2,45);
+}
+/*
 leds[46] = new LED(2,46);
 leds[47] = new LED(2,47);
 leds[48] = new LED(2,48);

@@ -29,8 +29,8 @@ void setup() {
   // in play mode is needed so at least one frame is read
   // and we can get duration, size and other information from
   // the video stream. 
-  mov = new Movie(this, "/Users/finbot/Documents/Projects/VestVideos/Firelooped.mp4");
-  //mov = new Movie(this, "/Users/finbot/Documents/Projects/Animation Videos/Artcar Videos/FireColorGraded.mp4");
+  //mov = new Movie(this, "/Users/finbot/Documents/Projects//FireColorGraded.mp4");
+  mov = new Movie(this, "/Users/finbot/Documents/Projects/Animation Videos/Artcar Videos/FireColorGraded.mp4");
   
   // Pausing the video at the first frame. 
   mov.play();
@@ -38,7 +38,7 @@ void setup() {
   mov.pause();
   
   famesToCapture = getLength();
-  //famesToCapture = 10;
+  famesToCapture = 100;
   SetupLedRendering();
   
 }
@@ -99,7 +99,7 @@ void StretchToFrameFactoring()
     print(" maxX="); println(maxX);
     print(" maxY="); println(maxY);
     
-    widthFactor = width/maxX/2;
+    widthFactor = width/maxX;
     heightFactor = (height/maxY)-2;
   
 
@@ -153,6 +153,7 @@ void GetPixelDataFromFrame()
     pixel.y *= heightFactor; 
     
     loadPixels();
+    //color c = get(width - pixel.x , height - pixel.y);
     color c = get(width - pixel.x , height - pixel.y);
     //print(" c=");println(c);
     
